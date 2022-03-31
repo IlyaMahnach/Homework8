@@ -6,6 +6,11 @@ public class Radio {
     public int getNumberStation() {
         return numberStation;
     }
+    public int volumeLevel;
+
+    public int getVolumeLevel() {
+        return volumeLevel;
+    }
 
     public void setNumberStation(int newNumberStation) {
         if (newNumberStation > 9) {
@@ -21,7 +26,7 @@ public class Radio {
         if (numberStation < 9) {
             numberStation = numberStation + 1;
         }
-        if (numberStation == 9) {
+        else if (numberStation == 9) {
             numberStation = 0;
         }
         numberStation = numberStation;
@@ -31,17 +36,12 @@ public class Radio {
         if (numberStation > 0) {
             numberStation = numberStation - 1;
         }
-        if (numberStation == 0) {
+        else if (numberStation == 0) {
             numberStation = 9;
         }
         numberStation = numberStation;
     }
 
-    public int volumeLevel;
-
-    public int getVolumeLevel() {
-        return volumeLevel;
-    }
 
     public void setVolumeLevel(int newVolumeLevel) {
         if (newVolumeLevel > 10) {
