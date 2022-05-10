@@ -3,11 +3,11 @@ package ru.netology.radio;
 public class Radio {
     public int numberStation;
 
+    public int volumeLevel;
+
     public int getNumberStation() {
         return numberStation;
     }
-
-    public int volumeLevel;
 
     public int getVolumeLevel() {
         return volumeLevel;
@@ -26,18 +26,15 @@ public class Radio {
     public void nextNumberStation() {
         if (numberStation < 9) {
             numberStation = numberStation + 1;
-        } else if (numberStation == 9) {
-            numberStation = 0;
-        }
+        } else numberStation = 0;
+
         numberStation = numberStation;
     }
 
     public void prevNumberStation() {
         if (numberStation > 0) {
             numberStation = numberStation - 1;
-        } else if (numberStation == 0) {
-            numberStation = 9;
-        }
+        } else numberStation = 9;
         numberStation = numberStation;
     }
 
